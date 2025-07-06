@@ -97,7 +97,7 @@ const getFallbackWeatherData = (city: string) => {
     Bangalore: {
       current: {
         location: "Bangalore, IN",
-        temperature: 24,
+        temperature: 26,
         condition: "Partly Cloudy",
         description: "few clouds",
         humidity: 60,
@@ -297,7 +297,7 @@ export async function GET(request: NextRequest) {
   }
 
   // Check if API key is available
-  if (!OPENWEATHER_API_KEY) {
+  if (!346d0a577840df251d15ac463e3942a7) {
     console.log("OpenWeather API key not found, using fallback data")
     const fallbackData = getFallbackWeatherData(city)
     return NextResponse.json(fallbackData)
@@ -308,7 +308,7 @@ export async function GET(request: NextRequest) {
 
     // Get current weather
     const currentWeatherResponse = await fetch(
-      `${BASE_URL}/weather?q=${encodeURIComponent(city)}&appid=$346d0a577840df251d15ac463e3942a7&units=metric}`,
+      `${BASE_URL}/weather?q=${encodeURIComponent(city)}&appid=346d0a577840df251d15ac463e3942a7&units=metric}`,
       {
         headers: {
           "User-Agent": "Weathrly-App/1.0",
@@ -334,7 +334,7 @@ export async function GET(request: NextRequest) {
 
     // Get 5-day forecast
     const forecastResponse = await fetch(
-      `${BASE_URL}/forecast?q=${encodeURIComponent(city)}&appid=$346d0a577840df251d15ac463e3942a7&units=metric}`,
+      `${BASE_URL}/forecast?q=${encodeURIComponent(city)}&appid=346d0a577840df251d15ac463e3942a7&units=metric}`,
       {
         headers: {
           "User-Agent": "Weathrly-App/1.0",
