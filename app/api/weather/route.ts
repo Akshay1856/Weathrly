@@ -308,7 +308,7 @@ export async function GET(request: NextRequest) {
 
     // Get current weather
     const currentWeatherResponse = await fetch(
-      `${BASE_URL}/weather?q=${encodeURIComponent(city)}&appid=${OPENWEATHER_API_KEY}&units=metric}`,
+      `${BASE_URL}/weather?q=${encodeURIComponent(city)}&appid=$346d0a577840df251d15ac463e3942a7&units=metric}`,
       {
         headers: {
           "User-Agent": "Weathrly-App/1.0",
@@ -334,7 +334,7 @@ export async function GET(request: NextRequest) {
 
     // Get 5-day forecast
     const forecastResponse = await fetch(
-      `${BASE_URL}/forecast?q=${encodeURIComponent(city)}&appid=${OPENWEATHER_API_KEY}&units=metric}`,
+      `${BASE_URL}/forecast?q=${encodeURIComponent(city)}&appid=$346d0a577840df251d15ac463e3942a7&units=metric}`,
       {
         headers: {
           "User-Agent": "Weathrly-App/1.0",
